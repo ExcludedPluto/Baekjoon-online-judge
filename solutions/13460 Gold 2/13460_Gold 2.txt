@@ -1,0 +1,9 @@
+알고리즘 
+	1. dp로 품
+	2. 위로 기울였을 때 R, B 위치를 기록 -> R B가 같으면 이동전 위치관계를 기준으로 위치 변경 -> deep 1추가하고 다음 dp시작
+	   오른쪽, 아래, 왼쪽에도 똑같이.
+	 -> B가 구멍에 빠졌으면 return / R이 구멍에 빠졌으면, 현재 deep이 최소인지 확인하고 return / deep이 10이랑 같거나 클때 return
+
+
+기타
+	memcpy(destination, original, sizeof(int)*2) 이런식으로 3번째 인수는 바이트 크기이므로 잘 처리하자.
