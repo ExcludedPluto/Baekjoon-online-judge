@@ -1,0 +1,6 @@
+다이나믹 프로그래밍
+
+알고리즘
+	1. 처음엔 degrees의 처음부터 dateToSum 만큼 더함
+	2. 두번째부턴 tempSum = tempSum - degrees[i-1] + degrees[i+dateToSum-1]; 
+		이렇게, 이전 연속 수열의 맨 앞부분을 이전 합친 값에서 빼고, 이번 연속수열의 마지막부분을 더하면 이번 수열의 총합을 빠르게 구할 수 있다.
