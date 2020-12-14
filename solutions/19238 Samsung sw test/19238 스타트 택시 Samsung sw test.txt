@@ -1,0 +1,17 @@
+알고리즘(BFS)
+	1. Taxi 구조체 : row, col, fuel / Customer 구조체 : currentRow, currentCol, dstRow, dstCol, distance / Candidate 구조체 : row, col, fuel, index
+	2. BFS로 각 손님들이 목적지까지 가는 최단경로를 구하여 distance에 저장
+		-> 위에서 구한 distance가 초기화할때 그대로면, 벽으로 가로막혀 손님이 목적지로 갈 수 없는 상태. 바로 -1 출력
+	3. 택시는 BFS로 손님들을 찾고, Candidate 벡터에 저장함. 다 찾고, 그 벡터를 fuel순, row순, col 순으로 정렬
+		-이때 candidate 벡터 사이즈가 0이면 벽으로 가로막혀 손님을 태울 수 없는 것. 바로 -1 출력
+	4. 정렬이 완료되면, 가장 앞에 있는 손님을 태우고 목적지로 이동.
+		-> 맵에서 손님의 인덱스를 지움
+		-> 택시의 row, col을 목적지의 row, col로 바꿈
+		-> 택시의 fuel에 (손님을 태우러 간거리 + 목적지까지의 거리)를 빼고, (목적지까지의 거리)*2를 더함
+		-> 만약 fuel이 부족하면 -1 출력
+
+
+주의점
+	1. 벽으로 가로막혀 태울 수 없는 손님
+	2. 벽으로 가로막혀 목적지에 갈 수 없는 손님
+	위 두가지 케이스를 조심
