@@ -58,6 +58,12 @@ set과 multiset
 		*temp	로 이 반복자가 가리키는 원소의 값을 참조할 수 있음.
 
 
-입력
-	cin.getline(char *str, size)	최대 size인 문자열을 받음
-					끝에는 \0이 저장됨
+문자열 입력
+	1. 길이를 정해줬을 때
+		: 띄어쓰기를 안했다해도, 그냥 map[i][j] 로 받으면 된다.
+	2. 길이를 안정해줬을 떄
+		: 	string temp;
+			cin >> tmep;
+			for(int i = 0; i<temp.length(); i++)
+				key[i] = temp[i];
+			로 받자
