@@ -1,3 +1,8 @@
+입출력 빠르게
+	ios::sync_with_stdio(false);
+	cin.tie(0);
+	를 main 시작하자마자 선언.
+
 문법
 	전역변수는 0으로 초기화됨.
 
