@@ -1,0 +1,10 @@
+알고리즘(자료구조, 트리를 이용한 이진탐색)
+	1. 게이트의 개수에 맞게 1~G를 set에 넣음
+	2. bool형 check 배열에서, gi에 아무것도 없으면 gi에 넣고 set에서 gi 삭제
+	3. 이미 gi에 들어가 있으면, set에서 upperbound로 gi초과하는 첫번째를 찾음
+			-> 만약 그 첫번째가 begin()이면 없는 것 -> false 반환 후 입력 종료
+			-> begin()이 아니면 그 곳에서 한칸 아래에 도킹하고, true반환
+
+
+주의점
+	1. set의 erase는 iterator를 받는다.
