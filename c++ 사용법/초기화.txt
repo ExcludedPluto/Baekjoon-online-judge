@@ -1,0 +1,3 @@
+cstring
+	memset(arr, 0 || -1, sizeof(arr));
+	memcpy(des, source, sizeof(int)*20);

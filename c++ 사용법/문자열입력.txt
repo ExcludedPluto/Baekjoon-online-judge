@@ -1,0 +1,21 @@
+1. 길이를 정해줬을 때
+	: 띄어쓰기를 안했다해도, 그냥 map[i][j] 로 받으면 된다.
+
+2. 길이를 안정해줬을 떄
+	: 	string temp;
+		cin >> tmep;
+		for(int i = 0; i<temp.length(); i++)
+			key[i] = temp[i];
+		로 받자
+
+
+정수형으로 변환할 때
+
+1. scanf 이용
+	scanf("%1d", &map[i][j])
+
+2. string 이용
+	string temp;
+	cin>> temp;
+	for(int j = 0; j<m; j++) 
+		map[i][j] = temp[j] - '0';

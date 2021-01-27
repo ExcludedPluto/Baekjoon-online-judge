@@ -1,0 +1,24 @@
+정렬
+	sort(시작 위치, 끝 위치); 	// 끝위치는 sizeof 안써도 된다. 그냥 배열 크기만큼 시작위치에서 더해주자.
+	sort(시작위치, 끝 위치, 정렬 함수명)
+	sort(vector.begin(), vector.end())
+	
+	정렬함수는 true일 경우 앞에있는 것이 앞에오도록 한다.
+
+	list의 경우 정렬시 list.sort() 로 사용한다
+
+순열
+	bool next_permutation (BidirectionalIterator first, BidirectionalIterator last);		// 1-2-3-4를 넣으면 1-2-4-3 으로 바뀌고, true반환
+													//next_permutation(vector.begin(), vector.end());
+	bool next_permutation (BidirectionalIterator first, BidirectionalIterator last, Compare comp);
+	
+이진탐색
+	binary_search( .begin(), .end(), v)
+		첫번째에 시작주소, 두번째에 끝주소 + 1, 세번째에 찾는 값
+		찾으면 true, 못찾으면 false 반환
+	lower_bound( .begin(), .end(), v)
+		v 이상이 처음 나타나는 곳의 포인터 반환
+		못찾으면 end() 반환
+	upper_bound( .begin(), .end(), v)
+		v 초과가 처음 나타나는 곳의 포인터 반환
+		못찾으면 end() 반환
