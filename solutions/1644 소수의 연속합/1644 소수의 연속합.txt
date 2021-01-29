@@ -1,0 +1,20 @@
+알고리즘(에라토스테네스의 체, 두 포인터)
+	1. 에라토스테네스의 체로, N이하의 소수를 모두 구함
+
+	2. 두 포인터로 일치하는 해당하는 연속합을 구함
+
+		초기 : start = 0, end = 1, sum = prime[0]
+		
+		while start < end 	
+
+			if sum == N
+				count++
+				sum -= prime[start++]		//밑에서 end를 기준으로 끝을 정했으니, start를 조작한다.
+			
+			else if sum < N
+				if end == numOfPrime		//더이상 커질 수 없으므로 종료
+					break;
+				sum += prime[end++]
+		
+			else 
+				sum -= prime[start++]		//크므로 줄임
