@@ -1,0 +1,17 @@
+<queue> 내부에 있음
+
+선언
+	priority_queue<T, Container, Compare>
+		: 타입, 구현체, 비교연산자를 넣음
+		: 타입은 무조건 넣어야하고, 구현체와 비교연산자는 안넣어도 됨
+		: 구현체의 디폴트는 vector<T>
+		: 비교연산자의 디폴트는 less (내림차순, maxHeap)
+
+
+
+메소드
+	push(element) : 원소추가
+	pop()	: top원소 삭제
+	top()	: top원소 반환
+	empty() : 비어있으면 true, 아니면 false
+	size()	: 원소 수 반환
