@@ -1,0 +1,5 @@
+알고리즘(DP)
+	1. 연속된 원소를 크게 이등분하여 계산할 수 있음 ex) (start ~ i, i+1~end)
+	2. dp(start, end)는 start에서 end까지의 범위를 계산할 때 최소비용.
+	3. 현재 비용은, matrixt[start][0]*matrix[i][1]*matrix[end][1] 로 계산할 수 있음.
+	4. start == end 일때 비용은 0
