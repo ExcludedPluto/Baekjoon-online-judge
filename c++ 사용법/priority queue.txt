@@ -8,6 +8,24 @@
 		: 비교연산자의 디폴트는 less (내림차순, maxHeap)
 
 
+	ex)
+	
+	priority_queue<int, vector<int>, greater<int>>
+
+	priority_queue<int>
+
+	
+	struct temp {
+		int value;
+	}
+	struct cmp {
+		bool operator()(temp a, temp b) {
+			return a.value < b.value;
+		}
+	}
+	
+	priority_queue<temp, vector<temp>, cmp>
+
 
 메소드
 	push(element) : 원소추가
