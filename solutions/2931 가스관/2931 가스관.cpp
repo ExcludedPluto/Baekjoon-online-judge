@@ -5,7 +5,7 @@ using namespace std;
 struct Location {
 	int row;
 	int col;
-	int way;	// 1~4 ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½
+	int way;	// 1~4 À§ ¿À ¾Æ ¿Þ
 };
 
 char eumap[25][25], answer;
@@ -13,8 +13,8 @@ int R, C;
 Location M, Z, blank;
 list<Location> q;
 
-bool findBlank(int row, int col);		//Ã£ï¿½ï¿½ï¿½ï¿½ true
-bool goNext(Location cur);			// ï¿½ï¿½Ä­ ï¿½ß°ß½ï¿½ false. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ true
+bool findBlank(int row, int col);		//Ã£À¸¸é true
+bool goNext(Location cur);			// ºóÄ­ ¹ß°ß½Ã false. ³ª¸ÓÁö true
 Location nextCell(Location c);
 void fillBlank();
 
@@ -23,6 +23,7 @@ int main() {
 	for (int i = 0; i < R; i++)
 		for (int j = 0; j < C; j++) {
 			cin >> eumap[i][j];
+			if (eumap[i][j] == 'M') 
 				M = { i, j, 0 };
 			else if (eumap[i][j] == 'Z') 
 				Z = { i, j, 0 };
