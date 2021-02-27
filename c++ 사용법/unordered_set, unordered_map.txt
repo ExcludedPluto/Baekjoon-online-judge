@@ -1,0 +1,11 @@
+unordered_set
+	
+
+unordered_map
+
+
+	: 둘다 set, map과 사용법은 동일
+
+	insert(key) 	: 넣음
+	erase(iter) 	: 삭제
+	find(key)	: 찾기

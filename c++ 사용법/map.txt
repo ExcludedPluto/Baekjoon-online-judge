@@ -1,0 +1,27 @@
+셋하고 비슷하지만 키에 대응하는 값까지 보관함
+
+키가 같은 건 보관 안함
+
+
+insert(make_pair(key, value));
+	
+	- 페어 형태로 <키, 값> 을 넘겨줌.
+
+	make_pair나 pair<string, int>(key, value) 이런식으로 넣자
+
+	- 똑같은 키값이 들어오면 나중 것이 무시됨.
+
+
+find(key)
+	
+	- 키를 기준으로 찾고, pair 형태로 둘 다 반환함
+
+	- 없으면 .end()
+
+
+
+value 수정
+
+	map[key] = value
+
+	이런식으로도 값의 수정이 가능하다.

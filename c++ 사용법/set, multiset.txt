@@ -24,3 +24,30 @@
 	s.insert(-1)
 
 	로 s 의 맨 앞에 원소를 추가했을 때, temp는 여전히 s.begin()이 아니라, 한칸 앞을 가리키고 있다
+
+
+
+구조체를 넣을 경우
+
+	bool operator<(const Todo& t) const {
+		~~~
+	}
+
+	이렇게 비교함수를 구조체 내부에 선언하라.
+
+
+	안되면
+	
+	struct TodoCmp {
+		bool operator()(const Todo& t1, const Todo& t2) const {
+			~~~
+		}
+	};
+
+	이렇게 밖에 비교함수를 선언하고
+
+	set<Todo, TodoCmp> todos 
+
+	이렇게 쓰자.
+
+	
